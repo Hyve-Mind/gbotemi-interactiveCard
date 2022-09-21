@@ -62,7 +62,8 @@ inputCVC.addEventListener("keyup",() =>{
     cvcErrorMessage()
 })
 function validateUserInput(){
-    if(inputCardNumber.value.length === 16 && inputMonth.value.length === 2 && inputYear.value.length === 2 && inputCVC.value.length === 3){
+    if(inputCardNumber.value.length === 16 && inputMonth.value.length === 2 && inputYear.value.length === 2 && inputCVC.value.length === 3
+        && inputMonth.value > 0 && inputMonth.value < 13 && inputYear.value > 21 && inputYear.value < 27){
         confirmBtn.disabled = false
     }
     else{
@@ -98,6 +99,12 @@ function dateErrorMessage(){
     }
     else if(inputMonth.value.length < 2 || inputYear.value.length < 2){
         incorrectDate.textContent = "input the correct date format"
+    }
+    else if(inputMonth.value === 00 || inputMonth.value > 12){
+        incorrectDate.textContent = "month must be between 01 to 12"
+    }
+    else if(inputYear.value < 22 || inputYear.value > 26){
+        incorrectDate.textContent = "Year can only be between 2022 to 2026"
     }
     else{
         incorrectDate.textContent = ""

@@ -21,10 +21,10 @@ body{
 input{
     font-size: 18px;
 }
-input:required:invalid{
+/* #cardHolder:invalid{
     border: 1px solid red;
-}
-input:required:valid{
+} */
+#cardHolder:valid{
     border: 1px solid blue;
 }
 form{
