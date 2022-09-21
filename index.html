@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARD DETAILS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = "container">
+        <div class = "left-design">
+            <div class = "cardImages">
+                <img src="images/bg-card-front.png" alt="">
+                <img src="images/bg-card-back.png" alt="">
+                <div class = "cardFront">
+                    <div>
+                        <img src="images/card-logo.svg" alt="">
+                    </div>
+                    <div class = "cardNumberDisplay">0000000000000000</div>
+                    <div>
+                        <span class = "cardNameDisplay">Ojo Gbotemi</span>
+                        <span>
+                            <span class = "displayMonth">00</span>
+                            <span>/</span>
+                            <span class = displayYear>00</span>
+                        </span>
+                    </div>
+                </div>
+                <div class = "cardBack">
+                    <div class="displayCVC">000</div>
+                </div>
+            </div>
+        </div>
+        <div class = "formContainer">
+            <div class = "theForm">
+                <form>
+                    <span class = "firstSpan">
+                        <label for="CardHolder">CARDHOLDER NAME</label>
+                        <input type="text" name="Card-Holder" id="cardHolder" placeholder="e.g. Ojo Gbotemi" minLength="6" maxLength ="30" required>
+                        <div class="incorrectName"></div>
+                    </span>
+                    <span>
+                        <label for="cardNumber">CARD NUMBER</label>
+                        <input type="number" name="card-Number" id="cardNumber" placeholder="e.g. 1234 5678 9123 0000" minLength="16" maxlength="16" required>
+                        <div class="incorrectNumber"></div>
+                    </span>
+                    <div class = "bottomContainer">
+                        <div>
+                            <span>EXP.DATE[MM/YY]</span>
+                            <input type="number" name="" id="month" placeholder="MM" maxLength="2" min=1 max=12 minLength="2" required>
+                            <input type="number" name="" id="year" placeholder="YY" maxLength="2" required minLength="2">
+                            <div class="incorrectDate"></div>
+                        </div>
+                        <div>
+                            <label for="cvc">CVC</label>
+                            <input type="number" name="CVC" id="cvc" placeholder="e.g. 123" maxLength="3" required minLength="3">
+                            <div class = "incorrectCVC"></div>
+                        </div>
+                    </div>
+                    <button type="reset" class = "submitBtn">Confirm</button>
+                </form>
+            </div>
+        </div>
+        <div class = "completeState">
+            <img src="images/icon-complete.svg" alt="">
+            <div>THANK YOU!</div>
+            <div>We've added your card details</div>
+            <button class = "Continue">Continue</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

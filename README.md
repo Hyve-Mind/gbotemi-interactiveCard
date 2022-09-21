@@ -1,1 +1,1 @@
-# gbotemi-interactiveCard
+# interactivecard
